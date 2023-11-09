@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../utils/Theme";
 
 export const MainBody = styled.div`
     background-color: ${({theme}) => theme.colors.primary};
@@ -62,11 +63,28 @@ export const IconContainer = styled.div`
     color: ${({color,theme})=> {
         switch(color){
             case 'white':
-                return theme.color.white;
+                return theme.colors.white;
             case 'blue':
                 return theme.colors.secondary;
             default:
                 return;        
         }
     }}
+`
+
+export const Button = styled.a`
+    display: inline-block;
+    width: max-content;
+    padding: 1rem 2rem;
+    color: ${({theme})=> theme.colors.white};
+    background-color: ${({thme})=> theme.colors.primary_light};
+    border: 1px solid ${({theme})=> theme.colors.gray};
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover{
+        color: ${({theme})=> theme.colors.primary_light};
+        background-color: ${({thme})=> theme.colors.white};
+    }
 `

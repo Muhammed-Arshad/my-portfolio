@@ -9,10 +9,15 @@ import {
     IconContainer
 } from '../styles/Global.styled.js'
 
+import { 
+    ShowcaseParticleContainer,
+    ShowcaseImageCard ,
+    Particle} from '../styles/Showcase.styled.js';
 
 import {BsLinkedin, BsTwitter, BsYoutube, BsInstagram} from "react-icons/bs";
-// import { icons } from 'react-icons'
 
+import ShowcaseImg from '../assets/showcase-img.png'
+import BackgroundImg from '../assets/particle.png'
 
 const Showcase = () => {
     return (
@@ -22,12 +27,12 @@ const Showcase = () => {
             right = '10%'
             top = '15%'
             bottom = '10%'>
-                <FlexContainer align = "center" fullWidthChild></FlexContainer>
+                <FlexContainer align = "left" fullWidthChild>
                 <div>
                     <Heading as = "h4" size = "h4">Hello!</Heading>
                     <Heading 
-                     as = "h1" 
-                     size = "h1"
+                     as = "h2" 
+                     size = "h2"
                      top = "0.5rem"
                      bottom = "1rem"
                      >I'm <BlueText>Muhammed Arshad</BlueText></Heading>
@@ -42,27 +47,57 @@ const Showcase = () => {
                         user-friendly mobile apps and web applications.
                      </ParaText>
 
-                     <FlexContainer>
-                        <IconContainer color='white' size = '1.5rem'>
+                     <FlexContainer gap="20px">
+                        <IconContainer color='blue' size = '1.5rem'>
                             <BsLinkedin/>
                         </IconContainer>
 
-                        <IconContainer color='white' size = '1.5rem'>
+                        <IconContainer color='blue' size = '1.5rem'>
                             <BsTwitter/>
                         </IconContainer>
 
-                        <IconContainer color='white' size = '1.5rem'>
+                        <IconContainer color='blue' size = '1.5rem'>
                             <BsYoutube/>
                         </IconContainer>
 
-                        <IconContainer color='white' size = '1.5rem'>
+                        <IconContainer color='blue' size = '1.5rem'>
                             <BsInstagram/>
                         </IconContainer>
                         
                      </FlexContainer>
+                    </div>
+                    <FlexContainer justify = "flex-end">
+                        <ShowcaseParticleContainer>
+                            <ShowcaseImageCard>
+                                <img src={ShowcaseImg} alt='showcase'/>
+                            </ShowcaseImageCard>
 
-                </div>
+                            <Particle
+                                src={BackgroundImg}
+                                alt='particle'
+                                top='-80px'
+                                left= '20px'
+                                rotate = '60deg' 
+                            />
 
+                            <Particle
+                                src={BackgroundImg}
+                                alt='particle'
+                                top='50px'
+                                right= '-70px'
+                                rotate = '0deg' 
+                            />
+
+                            <Particle
+                                src={BackgroundImg}
+                                alt='particle'
+                                bottom='10px'
+                                left= '-70px'
+                                rotate = '50deg' 
+                            />
+                        </ShowcaseParticleContainer>
+                    </FlexContainer>
+                </FlexContainer>
         </PaddingContainer>
     )
 }
