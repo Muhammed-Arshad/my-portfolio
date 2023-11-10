@@ -23,7 +23,7 @@ const Showcase = () => {
     return (
         <PaddingContainer
             id='Home'
-            left = '3%'
+            left = '5%'
             right = '10%'
             top = '15%'
             bottom = '10%'>
@@ -41,7 +41,7 @@ const Showcase = () => {
                         I'm a <BlueText>Frontend Developer</BlueText>
                      </Heading>
 
-                     <ParaText as= "p" top="2rem">
+                     <ParaText as= "p" top="2rem" bottom="2rem">
                         Hello, my name is Muhammed Arshad and I'm a front-end
                         developer with 2 years of experience in creating and designing 
                         user-friendly mobile apps and web applications.

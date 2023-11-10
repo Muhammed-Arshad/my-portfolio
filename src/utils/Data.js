@@ -1,5 +1,6 @@
 import {FaReact ,FaNode, FaCss3Alt} from 'react-icons/fa';
 import {SiJavascript} from 'react-icons/si'
+import { BiLogoFlutter,BiLogoMongodb } from 'react-icons/bi';
 
 import Project1 from '../assets/Project1.png'
 import Project2 from '../assets/Project2.png'
@@ -7,8 +8,9 @@ import Project2 from '../assets/Project2.png'
 export const Skills = [
     {
         id: 0,
-        tech: 'React JS',
-        icon: <FaReact/>
+        tech: 'Flutter',
+        icon: <BiLogoFlutter/>,
+
     },
     {
         id: 1,
@@ -25,6 +27,17 @@ export const Skills = [
         tech: 'Javascript',
         icon: <SiJavascript/>
     },
+    {
+        id: 4,
+        tech: 'React JS',
+        icon: <FaReact/>
+    },
+    {
+        id: 5,
+        tech: 'MongoDB',
+        icon: <BiLogoMongodb/>
+    },
+      
 ];
 
 export const projectDetails = [
@@ -47,4 +60,27 @@ export const projectDetails = [
         reverse:false
     },
 
+];
+
+export const navLinks = [
+    {
+        id: 0,
+        name: 'Home',
+        href: 'Home'
+    },
+    {
+        id: 1,
+        name: 'My Skills',
+        href: 'Skills'
+    },
+    {
+        id: 2,
+        name: 'My Projects',
+        href: 'Projects'
+    },
+    {
+        id: 3,
+        name: 'My Contact',
+        href: 'Contact'
+    },
 ]
