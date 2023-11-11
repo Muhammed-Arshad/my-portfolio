@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion';
 
 import {
     PaddingContainer,
@@ -16,15 +17,27 @@ import {
 
 import { Skills } from '../utils/Data.js'
 
+import { fadeInLeftVariant,fadeInRightVariant } from '../utils/Variants.js';
+
 function MySkills() {
     return (
         <PaddingContainer
             id='Skills'
             top = "10%"
             bottom = "10%"
+            responsiveLeft = "1rem"
+            responsiveRight = "1rem"
         >
-            <FlexContainer fullWidthChild>
-                <SkillsCardContainer>
+            <FlexContainer 
+                responsiveFlex 
+                responsiveDirection = "column-reverse"
+                fullWidthChild>
+                <SkillsCardContainer
+                    as={motion.div}
+                    variants={fadeInLeftVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    >
                     {Skills.map((skill)=> (
                         <SkillsCard>
                             <IconContainer size ="5rem" color='blue'>
@@ -39,7 +52,11 @@ function MySkills() {
                     ))}
                 </SkillsCardContainer>
 
-                <div>
+                <motion.div
+                    variants={fadeInRightVariant}
+                    initial="hidden"
+                    whileInView="visible"
+                    >
                     <Heading as="h4" size= "h4">
                         MY SKILLS
                     </Heading>
@@ -75,7 +92,7 @@ function MySkills() {
                          I am excited about the prospect of contributing my skills and passion to new challenges, collaborating to turn 
                          visions into digital realities. Let's embark on the journey of creating something extraordinary together
                     </ParaText>
-                </div>
+                </motion.div>
 
             </FlexContainer>
 

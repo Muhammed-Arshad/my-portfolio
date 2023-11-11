@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {motion} from 'framer-motion'
 import {
     PaddingContainer,
     FlexContainer,
@@ -17,12 +17,17 @@ import {
     ProjectImage
 } from '../../styles/MyProjects.styled.js'
 
-import Project1 from '../../assets/Project1.png'
+import { fadeInLeftVariant,fadeInRightVariant } from '../../utils/Variants.js';
 
 function Project({data}) {
     return (
-      <FlexContainer fullWidthChild>
-        <div>
+      <FlexContainer 
+        direction = {data.reverse? 'row-reverse': false}
+        fullWidthChild>
+        <motion.div
+            variants= {data.reverse? fadeInRightVariant:fadeInLeftVariant}
+            initial="hidden"
+            whileInView="visible">
             <FlexContainer align= "center" gap="1rem">
                 <Heading as="h3" size="h3" bottom="1rem">
                     {data.project_name}
@@ -45,9 +50,9 @@ function Project({data}) {
                 {data.project_desc}</ParaText>
 
             <Button>Visit Website</Button>
-        </div>
+        </motion.div>
 
-        <ProjectImageContainer justify = "flex-end">
+        <ProjectImageContainer justify = {data.reverse? "flex-start":"flex-end"}>
             <ProjectImage src = {data.project_img} alt={data.project_name}/>
         </ProjectImageContainer>
       </FlexContainer>  

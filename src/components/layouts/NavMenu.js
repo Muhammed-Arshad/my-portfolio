@@ -26,7 +26,7 @@ function NavMenu({setOpenMenu}) {
         <PaddingContainer
             left="5%" right="5%" top="2rem"
         >
-            <FlexContainer jsutify="flex-end">
+            <FlexContainer jsutify="flex-end" responsiveFlex>
                 <MenuIcon onClick={()=> setOpenMenu(false)}>
                     <AiOutlineClose/>
                 </MenuIcon>
@@ -36,7 +36,7 @@ function NavMenu({setOpenMenu}) {
         </PaddingContainer>
 
         <PaddingContainer top="8%">
-            <FlexContainer direction="column" align="center">
+            <FlexContainer direction="column" align="center" responsiveFlex>
                 {navLinks.map((link)=>(
                     <MenuItem 
                     key= {link.id}

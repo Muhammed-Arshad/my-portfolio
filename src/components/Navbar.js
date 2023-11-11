@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import React ,{useEffect, useState} from 'react'
 
 
 import {
@@ -26,16 +26,28 @@ import NavMenu from './layouts/NavMenu.js';
 function Navbar() {
 
     const [openMenu, setOpenMenu] = useState(false);
+    const [sticky, setSticky] = useState(false);
+
+    useEffect(()=>{
+        const onScroll = ()=>{
+            window.scrollY > 50? setSticky(true) : setSticky(false)
+    }
+        window.addEventListener('scroll',onScroll);
+
+        return ()=> window.removeEventListener('scroll',onScroll);
+    },[])
 
     return (
-        <NavbarContainer bgColor="transparent">
+        <NavbarContainer bgColor={sticky ? theme.colors.primary:"transparent"}>
             <PaddingContainer
                 top="1.2rem"
                 bottom="1.2rem"
                 left="5%"
+                responsiveLeft="1rem"
+                responsiveRight="1rem"
             >
                 <Container>
-                    <FlexContainer justify="space-between">
+                    <FlexContainer justify="space-between" responsiveFlex>
                         <Logo>
                             Dev<BlueText>Arsh</BlueText>
                         </Logo>

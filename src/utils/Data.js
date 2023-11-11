@@ -57,7 +57,7 @@ export const projectDetails = [
         tech_stack: ['React JS', 'Tailwind','Firebase'],
         project_img: Project2,
         project_url: 'https://',
-        reverse:false
+        reverse:true
     },
 
 ];
