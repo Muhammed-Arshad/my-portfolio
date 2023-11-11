@@ -10,7 +10,7 @@ export const ShowcaseParticleContainer = styled.div`
 `
 
 export const ShowcaseImageCard = styled.div`
-    border: 1px solid white;
+    // border: 1px solid white;
     width: max-content;
     padding-top: 2rem;
     border-radius: 1 rem;

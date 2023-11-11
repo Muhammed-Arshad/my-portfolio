@@ -17,7 +17,7 @@ import {
 
 import {BsLinkedin, BsTwitter, BsYoutube, BsInstagram} from "react-icons/bs";
 
-import ShowcaseImg from '../assets/showcase-img.png'
+import ShowcaseImg from '../assets/my_profile_pic.png'
 import BackgroundImg from '../assets/particle.png'
 
 import { fadeInLeftVariant,fadeInRightVariant } from '../utils/Variants.js';
@@ -27,7 +27,7 @@ const Showcase = () => {
         <PaddingContainer
             id='Home'
             left = '5%'
-            right = '10%'
+            right = '5%'
             top = '18%'
             bottom = '10%'
             responsiveTop = "8rem"
@@ -85,7 +85,7 @@ const Showcase = () => {
                     >
                         <ShowcaseParticleContainer>
                             <ShowcaseImageCard>
-                                <img src={ShowcaseImg} alt='showcase'/>
+                                <img src={ShowcaseImg} alt='showcase' height={400} width={450}/>
                             </ShowcaseImageCard>
 
                             <Particle
