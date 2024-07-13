@@ -7,7 +7,8 @@ import {
     Heading,
     ParaText,
     BlueText,
-    IconContainer
+    IconContainer,
+    Button
 } from '../styles/Global.styled.js'
 
 import { 
@@ -22,7 +23,20 @@ import BackgroundImg from '../assets/particle.png'
 
 import { fadeInLeftVariant,fadeInRightVariant } from '../utils/Variants.js';
 
+const MY_CV_PDF = 'http://localhost:3000/Arshad_CV.pdf'
+
 const Showcase = () => {
+
+    const downloadFile=(url)=>{
+        const fileName = url.split('/').pop();
+        const aTag = document.createElement('a');
+        aTag.href = url;
+        aTag.setAttribute('download','')
+        document.body.appendChild(aTag)
+        aTag.click();
+        aTag.remove();
+    }
+
     return (
         <PaddingContainer
             id='Home'
@@ -35,9 +49,9 @@ const Showcase = () => {
             responsiveRight = "1rem">
                 <FlexContainer align = "left" fullWidthChild>
                 <motion.div
-                    variants={fadeInLeftVariant}
-                    initial = "hidden"
-                    whileInView="visible"
+                    // variants={fadeInLeftVariant}
+                    // initial = "hidden"
+                    // whileInView="visible"
                 >
                     <Heading as = "h4" size = "h4">Hello!</Heading>
                     <Heading 
@@ -53,28 +67,37 @@ const Showcase = () => {
 
                      <ParaText as= "p" top="2rem" bottom="2rem">
                         Hello, my name is Muhammed Arshad and I'm a front-end
-                        developer with 2 years of experience in creating and designing 
+                        developer with over 3 years of experience in creating and designing 
                         user-friendly mobile apps and web applications.
                      </ParaText>
 
                      <FlexContainer gap="20px" responsiveFlex>
-                        <IconContainer color='blue' size = '1.5rem'>
-                            <BsLinkedin/>
-                        </IconContainer>
-
-                        <IconContainer color='blue' size = '1.5rem'>
-                            <BsTwitter/>
-                        </IconContainer>
-
-                        <IconContainer color='blue' size = '1.5rem'>
-                            <BsYoutube/>
-                        </IconContainer>
-
-                        <IconContainer color='blue' size = '1.5rem'>
-                            <BsInstagram/>
-                        </IconContainer>
-                        
-                     </FlexContainer>
+                        <a href="https://www.linkedin.com/in/muhammed-arshad-628b23193" target="_blank" rel="noopener noreferrer">
+                            <IconContainer color='blue' size='1.5rem'>
+                                <BsLinkedin/>
+                            </IconContainer>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                            <IconContainer color='blue' size='1.5rem'>
+                                <BsTwitter/>
+                            </IconContainer>
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                            <IconContainer color='blue' size='1.5rem'>
+                                <BsYoutube/>
+                            </IconContainer>
+                        </a>
+                        <a href="https://www.instagram.com/muhd_arshad_/" target="_blank" rel="noopener noreferrer">
+                            <IconContainer color='blue' size='1.5rem'>
+                                <BsInstagram/>
+                            </IconContainer>
+                        </a>
+                    </FlexContainer>
+                    <br/>
+                    <FlexContainer justify="left" responsiveFlex>
+                                <Button onClick={()=>{downloadFile(MY_CV_PDF)}}>
+                                    Download CV</Button>
+                            </FlexContainer>
                     </motion.div>
                     <FlexContainer 
                         as={motion.div}

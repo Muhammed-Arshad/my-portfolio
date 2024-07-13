@@ -1,0 +1,45 @@
+.vertical-timeline-element-content {
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25), 0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+    padding: 2em 3em !important;
+  }
+  
+  .date {
+    color: rgb(201, 251, 255);
+  }
+  
+  #description {
+    margin: 1.5em 0 2em 0;
+  }
+  
+  .button {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: flex;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    justify-content: center;
+    color: white;
+  }
+
+
+  
+  .workButton {
+    background-color: #d606d2;
+  }
+  
+  .workButton:hover {
+    background-color: #c50a0a;
+  }
+  
+  .schoolButton {
+    background-color: #f9c74f;
+  }
+  
+  .schoolButton:hover {
+    background-color: #f3bc3c;
+  }
+
+  
+  

@@ -8,6 +8,7 @@ import MySkills from "./components/MySkills";
 import MyProjects from "./components/MyProjects";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import MyExperience from "./components/MyExperience";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Container>
           <Showcase/>
           <MySkills/>
+          <MyExperience/>
           <MyProjects/>
           <Footer/>
         </Container>

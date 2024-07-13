@@ -14,10 +14,10 @@ export const SkillsCardContainer = styled.div`
 `
 
 export const SkillsCard = styled.div`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border: 1px solid #fff;
-    padding: 3rem 0;
+    padding: 2rem 0;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;

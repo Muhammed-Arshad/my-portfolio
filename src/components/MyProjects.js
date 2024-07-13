@@ -28,17 +28,17 @@ function MyProjects() {
         >
             <Heading 
                 as={motion.h4}
-                variants={fadeInTopVariant}
-                initial = "hidden"
-                whileInView="visible" 
+                // variants={fadeInTopVariant}
+                // initial = "hidden"
+                // whileInView="visible" 
                 size="h4"
                 >MY PROJECTS</Heading>
 
             <Heading 
                 as={motion.h2}
-                variants={fadeInTopVariant}
-                initial = "hidden"
-                whileInView="visible" 
+                // variants={fadeInTopVariant}
+                // initial = "hidden"
+                // whileInView="visible" 
                 size="h2">
                 What <BlueText>I have built</BlueText>
             </Heading>
